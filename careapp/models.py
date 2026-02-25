@@ -25,3 +25,16 @@ class doctor(models.Model):
 
      def __str__(self):
          return self.firtname + self.lastname  
+     
+
+class MyAppointments(models.Model):
+    name = models.CharField(max_length=200)
+    email = models.EmailField()
+    phone = models.CharField(max_length=10)
+    datetime = models.DateTimeField()
+    department = models.CharField(max_length=100)
+    doctor = models.CharField(max_length=100)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.name
