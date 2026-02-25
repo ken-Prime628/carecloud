@@ -34,3 +34,13 @@ def appointment(request):
 
 def about(request):
     return render(request, 'about.html')
+
+
+def services(request):
+    return render(request, 'services.html')
+
+
+def show(request):
+      allappointments = MyAppointments.objects.all()
+
+      return render(request, 'show.html', {'allappointments':allappointments})
